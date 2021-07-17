@@ -1,22 +1,21 @@
 package A1;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @author baiweiyang
  */
 public class A1 {
 }
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map map = new HashMap();
-        for(int i = 0 ;i<nums.length;i++){
-            if(!map.containsKey(target - nums[i])){
-                map.put(nums[i],i);
-            }else {
+        for (int i = 0; i < nums.length; i++) {
+            if (!map.containsKey(target - nums[i])) {
+                map.put(nums[i], i);
+            } else {
                 return new int[]{i, (int) map.get(target - nums[i])};
             }
         }
